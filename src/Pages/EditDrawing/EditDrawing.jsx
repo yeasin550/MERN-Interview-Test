@@ -9,21 +9,43 @@ import Loading from "../../components/CommonComponents/Loading";
 const EditDrawing = () => {
     const navigate = useNavigate();
     const { drawingId } = useParams();
-    const { data: drawing, isLoading, isError, error } = useQuery(["drawing", drawingId], () => getDrawing(drawingId));
+
+    // Fetch the drawing using the drawingId from the URL
+    const { data: drawing, isLoading, isError, error } = useQuery(
+        ["drawing", drawingId],
+        () => getDrawing(drawingId),
+        {
+            // Refetches the data every time drawingId changes
+            enabled: !!drawingId
+        }
+    );
 
     useEffect(() => {
+        // Display error and navigate to explore page if fetching fails
         if (isError) {
-            toast.error(error?.response?.data?.message);
-            navigate("/drawings/explore");
+            toast.error(error?.response?.data?.message || "Failed to fetch drawing.");
+            navigate("/exploreDrawings");
         }
-    }, [error, isError, navigate]);
+    }, [isError, error, navigate]);
 
-    return (
-        isLoading ?
+    if (isLoading) {
+        // Display loading indicator while fetching
+        return (
             <div className="flex justify-center items-center h-screen w-full">
                 <Loading className="w-12 h-12" />
             </div>
-            : <DrawingBoard drawing={drawing?.data} />
+        );
+    }
+
+    return (
+        drawing ? (
+            // Render the DrawingBoard with the fetched drawing
+            <DrawingBoard drawing={drawing} />
+        ) : (
+            <div className="flex justify-center items-center h-screen w-full">
+                <p className="text-xl text-red-500">Drawing not found</p>
+            </div>
+        )
     );
 };
 

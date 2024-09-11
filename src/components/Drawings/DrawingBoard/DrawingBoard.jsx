@@ -142,7 +142,7 @@ const DrawingBoard = ({ drawing }) => {
 
     return (
         <div className="flex flex-col items-center relative">
-            <div className='mt-4 pl-3 sticky z-50 flex flex-col md:flex-row items-center md:items-start justify-between w-full'>
+            <div className='m-4 p-5 sticky z-50 flex flex-col md:flex-row items-center md:items-start justify-between w-full'>
                 <a href="/">
                     
                 <button className='sticky z-50 min-w-max mr-4 border-transparent py-2 px-3 rounded text-white bg-primary bg-purple-700 hover:bg-purple-500 focus:bg-purple-700 disabled:bg-purple-300 disabled:text-gray-400'>Home</button>

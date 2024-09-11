@@ -1,10 +1,26 @@
+import { Toaster } from "react-hot-toast";
 import { Outlet } from "react-router-dom";
 // import Navbar from "../components/Navbar/Navbar";
 
 const Main = () => {
     return (
         <div>
-            {/* <Navbar/> */}
+            <Toaster
+                position="top-right"
+                toastOptions={{
+                    duration: 10000,
+                    success: {
+                        style: {
+                            background: "#ECFDF3",
+                        },
+                    },
+                    error: {
+                        style: {
+                            background: "#FEF3F2",
+                        },
+                    },
+                }}
+            />
             <Outlet/>
         </div>
     );

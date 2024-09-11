@@ -2,13 +2,13 @@
 const Home = () => {
     return (
         <div className="flex items-center justify-center min-h-screen bg-cover bg-center"
-        // style={{
-        //     backgroundImage: "url('/images/red-circle.png')",
-        //     backgroundRepeat: "no-repeat",
-        //     backgroundSize: window.innerWidth >= 768 ? "35%" : "100%",
-        //     backgroundPosition: "center",
-        //     backgroundPositionX: "45%"
-        // }}
+        style={{
+            backgroundImage: "url('/images/grid.svg')",
+            backgroundRepeat: "no-repeat",
+            backgroundSize: window.innerWidth >= 768 ? "35%" : "100%",
+            backgroundPosition: "center",
+            backgroundPositionX: "45%"
+        }}
         >
 
             <div className="flex flex-col space-y-4 md:space-y-8 px-4 md:px-0 md:w-6/12 mx-auto">
@@ -23,7 +23,7 @@ const Home = () => {
 
                     <a href="/exploreDrawings">
 
-                    <button className="border-gray-300 rounded text-gray-900 bg-transparent hover:bg-gray-100 py-2 px-3 border-[1px] focus:ring-gray-200 disabled:bg-gray-200 disabled:text-gray-300" href="/drawings/explore">Explore All Drawings</button>
+                        <button className="border-gray-300 rounded text-gray-900 bg-transparent bg-orange-200 hover:bg-orange-300 py-2 px-3 border-[1px] focus:ring-orange-200 disabled:bg-orange-200 disabled:text-orange-300" href="/drawings/explore">Explore All Drawings</button>
                     </a>
                 </div>
             </div>

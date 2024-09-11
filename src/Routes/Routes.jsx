@@ -9,7 +9,7 @@ import Home from "../Pages/Home/Home";
 import EditDrawing from "../Pages/EditDrawing/EditDrawing";
 import CreateDrawing from "../Pages/CreateDrawing/CreateDrawing";
 import ExploreDrawings from "../Pages/ExploreDrawings/ExploreDrawings";
-// import { Toaster } from "react-hot-toast";
+
 
 const router = createBrowserRouter([
     {
@@ -25,7 +25,7 @@ const router = createBrowserRouter([
                 element: <CreateDrawing />
             },
             {
-                path: "/draw/edit/:drawingId",
+                path: "/drawing_edit/:drawingId",
                 element:< EditDrawing />
             },
             {
@@ -34,26 +34,12 @@ const router = createBrowserRouter([
             },
 
 
-        ]
+        ],
+        
     },
+    
 ]);
 export default router;
 
 
 
-{/* <Toaster
-    position="bottom-left"
-    toastOptions={{
-        duration: 10000,
-        success: {
-            style: {
-                background: "#ECFDF3",
-            },
-        },
-        error: {
-            style: {
-                background: "#FEF3F2",
-            },
-        },
-    }}
-/> */}

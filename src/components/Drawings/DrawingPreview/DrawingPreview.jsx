@@ -2,12 +2,10 @@
 import { useRef, useEffect } from 'react';
 import { drawArrow, drawCircle, drawDiamond, drawLine, drawPencil, drawRectangle, renderDynamicText } from '../../../Utils/drawingHelpers';
 
-
-
-
 const DrawingPreview = ({ drawing }) => {
-    const canvasRef = useRef < HTMLCanvasElement > (null);
-    const contextRef = useRef < CanvasRenderingContext2D | null > (null);
+    // console.log(drawing);
+    const canvasRef = useRef(null); 
+    const contextRef = useRef(null); 
     const { elements } = drawing || { elements: [] };
 
     useEffect(() => {
