@@ -5,14 +5,14 @@ const Home = () => {
         style={{
             backgroundImage: "url('/images/grid.svg')",
             backgroundRepeat: "no-repeat",
-            backgroundSize: window.innerWidth >= 768 ? "35%" : "100%",
+            backgroundSize: window.innerWidth >= 768 ? "60%" : "100%",
             backgroundPosition: "center",
             backgroundPositionX: "45%"
         }}
         >
 
             <div className="flex flex-col text-center space-y-4 md:space-y-8 px-4 md:px-0 md:w-6/12 mx-auto">
-                <h2 className="text-3xl md:text-6xl font-bold font-fira-sans leading-10">Discover Your  Creativity
+                <h2 className="text-3xl md:text-6xl font-bold font-fira-sans leading-10">Discover Your  <span className="text-purple-700">Creativity</span>
                 </h2>
                 <p className="text-xl font-fira-sans leading-7">Unlock your artistic potential with our interactive digital whiteboard. Create, collaborate, and inspire within a vibrant community of creators. <br /></p>
                 <div className="flex items-center justify-center gap-5">
