@@ -1,7 +1,7 @@
 
 const Home = () => {
     return (
-        <div className="flex items-center justify-center min-h-screen bg-cover bg-center"
+        <div className="flex items-center min-h-screen justify-center bg-cover bg-center"
         style={{
             backgroundImage: "url('/images/grid.svg')",
             backgroundRepeat: "no-repeat",
@@ -11,11 +11,11 @@ const Home = () => {
         }}
         >
 
-            <div className="flex flex-col space-y-4 md:space-y-8 px-4 md:px-0 md:w-6/12 mx-auto">
+            <div className="flex flex-col text-center space-y-4 md:space-y-8 px-4 md:px-0 md:w-6/12 mx-auto">
                 <h2 className="text-3xl md:text-6xl font-bold font-fira-sans leading-10">Discover Your  Creativity
                 </h2>
                 <p className="text-xl font-fira-sans leading-7">Unlock your artistic potential with our interactive digital whiteboard. Create, collaborate, and inspire within a vibrant community of creators. <br /></p>
-                <div className="flex items-center justify-start space-x-4">
+                <div className="flex items-center justify-center gap-5">
                     <a href="/createDrawing">
                         
                         <button className="border-transparent py-2 px-3 rounded text-white bg-primary bg-purple-700 hover:bg-purple-500 focus:bg-purple-700 disabled:bg-red-100 disabled:text-gray-300" href="/createDrawing">Create Drawing</button>

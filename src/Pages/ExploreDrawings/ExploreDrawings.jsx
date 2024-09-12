@@ -63,17 +63,17 @@ const ExploreDrawings = () => {
                     </div>
                 </div>
             ) : drawings?.length ? (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
                     {drawings.map((drawing) => (
                         <div key={drawing._id} className="relative border p-4 rounded-lg duration-150 hover:border-black hover:shadow-md block group">
                             <Link to={`/drawing_edit/${drawing._id}`}>
-                                <h3 className="text-lg font-bold font-fira-sans">{drawing.title}</h3>
+                                <h3 className="text-lg text-purple-700 font-bold font-fira-sans">{drawing.title}</h3>
                                 <p className="text-sm text-gray-600 mb-4">{drawing.description}</p>
                                 <DrawingPreview drawing={drawing} />
                             </Link>
                             <div className="absolute top-2 right-2 hidden group-hover:block">
                                 <button onClick={() => handleDelete(drawing._id)}>
-                                    <MdDeleteOutline className="w-8 h-8 border-transparent p-1 rounded text-white bg-primary bg-red-600 hover:bg-red-500 focus:bg-red-700" />
+                                    <MdDeleteOutline className="w-8 h-8 border-transparent p-1 rounded-full text-white bg-primary bg-[#FE0000] hover:bg-red-500 focus:bg-red-700" />
                                 </button>
                             </div>
                         </div>

@@ -10,7 +10,7 @@ const ToolbarButton = ({ title, icon, onClick, isSelected }) => {
         <button
             title={title}
             onClick={onClick}
-            className={`focus:outline-none focus:border-none hover:bg-red-100 p-2 rounded-lg ${isSelected ? 'bg-red-200 hover:bg-red-200' : ''}`}
+            className={`focus:outline-none focus:border-none hover:bg-purple-300 p-2 rounded-lg ${isSelected ? 'bg-purple-700 text-white hover:bg-purple-200' : ''}`}
         >
             {icon}
         </button>
